@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Ateles Max Base Common Settings and Data Installer (CSDI) for settings and data that either does not require its own module(s) and/or
- * that does not fit in anywhere else.
+ * that does not fit in anywhere else.sdfdf
  */
 class InstallData implements InstallDataInterface
 {
