@@ -1,0 +1,3 @@
+core_config_path,core_config_value,requires_encryptorrr
+payment/klarna_kco/active,1,0
+klarna/api/api_version, 'uk',0

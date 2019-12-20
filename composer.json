@@ -1,0 +1,26 @@
+{
+  "name": "salle/customer",
+  "description": "Magento 2 SEO extension",
+  "require": {
+    "magento/magento-composer-installer": "*"
+  },
+  "type": "magento2-module",
+  "version": "2.2.0",
+  "license": "proprietary",
+  "keywords": [
+    "magento 2"
+  ],
+  "authors": [
+    {
+      "name": "Salle"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Salle\\Customer\\": ""
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/e†c/config.xsd">
+    !--Orverriding Customer.php model using preference method -->
+    <preference for="Klarna\Kco\Model\KcoConfigProvider" type="Salle\Customer\Model\Customer"/>
+    <preference for="Salle\Customer\Api\providerInterface" type="Salle\Customer\Model\Provider" />
+</config>
