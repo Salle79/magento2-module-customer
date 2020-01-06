@@ -1,0 +1,14 @@
+core_config_path,core_config_value,requires_encryptor
+payment/klarna_kco/active,1,0
+klarna/api/api_version,uk,0
+klarna/api/merchant_id,PK07797_c2688244bd22,0
+klarna/api/shared_secret,0MMdd7PQHs105acm,1
+klarna/api/test_mode,1,0
+klarna/api/debug,1,0,
+general/store_information/country_id,SE,0
+checkout/klarna_kco_design/color_button,#000033,0
+checkout/klarna_kco_design/color_button_text,#ffffff,0
+checkout/klarna_kco_design/color_checkbox,#fc6621,0
+checkout/klarna_kco_design/color_checkbox_checkmark,#fc6621,0
+checkout/klarna_kco_design/color_header,#212121,0
+checkout/klarna_kco_design/color_link,#212121,0

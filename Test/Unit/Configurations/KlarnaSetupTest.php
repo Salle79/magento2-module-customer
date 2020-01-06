@@ -1,10 +1,11 @@
 <?php
 namespace Salle\Customer\Test\Unit\Setup\Configurations;
-use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
-use Salle\Customer\Setup\Configurations\KlarnaSetup;
+
 use Magento\Config\Model\ResourceModel\Config;
 use Magento\Framework\Encryption\EncryptorInterface;
+use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
 use PHPUnit\Framework\TestCase;
+use Salle\Customer\Setup\Configurations\KlarnaSetup;
 
 class KlarnaSetupTest extends TestCase
 {
@@ -31,7 +32,6 @@ class KlarnaSetupTest extends TestCase
     {
         $objectManager = new ObjectManager($this);
         $args = $objectManager->getConstructArguments(KlarnaSetup::class);
-
 
         $this->mockEncrypt
             ->expects($this->once())

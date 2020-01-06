@@ -1,15 +1,13 @@
 <?php
 
-namespace Ateles\Installer\Setup;
+namespace Salle\Customer\Setup;
 
-use Ateles\Installer\Setup\Configurations\KlarnaSetup;
-use Ateles\Installer\Setup\Configurations\ThemeSetup;
-use Ateles\Installer\Setup\Configurations\WidgetSetup;
 use Magento\Framework\Exception\ConfigurationMismatchException;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
-use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Psr\Log\LoggerInterface;
+use Salle\Customer\Setup\Configurations\KlarnaSetup;
 
 /**
  * Ateles Max Base Common Settings and Data Installer (CSDI) for settings and data that either does not require its own module(s) and/or
@@ -32,6 +30,10 @@ class InstallData implements InstallDataInterface
      */
     private $widgetSetup;
     /**
+     * @var ConfigurationService
+     */
+    private $configuratorService;
+    /**
      * @var KlarnaSetup
      */
     private $klarnaSetup;
@@ -39,19 +41,15 @@ class InstallData implements InstallDataInterface
     /**
      * InstallData constructor.
      * @param LoggerInterface $logger
-     * @param ThemeSetup $themeSetup
-     * @param KlarnaSetup $klarnaSetup
+     * @param ConfigurationService $configuratorService
      */
     public function __construct(
         LoggerInterface $logger,
-        ThemeSetup $themeSetup,
-        WidgetSetup $widgetSetup,
-        KlarnaSetup $klarnaSetup)
-    {
+        KlarnaSetup $klarnaSetup
+    ) {
         $this->logger = $logger;
-        $this->themeSetup = $themeSetup;
-        $this->widgetSetup = $widgetSetup;
         $this->klarnaSetup = $klarnaSetup;
+
     }
 
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context): void
@@ -69,12 +67,6 @@ class InstallData implements InstallDataInterface
      */
     private function runSetup(): void
     {
-        $this->logger->info('Setting Ateles theme');
-        $this->themeSetup->switchToThemeAteles();
-
-        $this->logger->info('Creating widgets');
-        $this->widgetSetup->setup();
-
         $this->logger->info('Enabling Klarna');
         $this->klarnaSetup->setup();
     }

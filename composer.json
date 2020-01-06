@@ -1,5 +1,5 @@
 {
-  "name": "salle/customer",
+  "name": "salle/module-customer",
   "description": "Magento 2 SEO extension",
   "require": {
     "magento/magento-composer-installer": "*"
